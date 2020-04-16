@@ -1,0 +1,819 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20192.20.0218.0709                               -->
+<workbook source-build='2019.2.9 (20192.20.0218.0709)' source-platform='mac' version='18.1' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <AutoCreateAndUpdateDSDPhoneLayouts ignorable='true' predowngraded='true' />
+    <MapboxVectorStylesAndLayers />
+    <SheetIdentifierTracking ignorable='true' predowngraded='true' />
+    <WindowsPersistSimpleIdentifiers />
+    <ZoneBackgroundTransparency />
+  </document-format-change-manifest>
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <datasources>
+    <datasource caption='countries2' inline='true' name='federated.0mrkz5c00gms3g1fizvno1678vfw' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='countries2' name='textscan.0a9xl1y1r9zi4412hm4ls0vb5a95'>
+            <connection class='textscan' directory='/Users/nancycampos/git/COVID/3' filename='countries2.csv' password='' port='0' server='' />
+          </named-connection>
+        </named-connections>
+        <relation connection='textscan.0a9xl1y1r9zi4412hm4ls0vb5a95' name='countries2.csv' table='[countries2#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+            <column datatype='integer' name='id' ordinal='0' />
+            <column datatype='date' name='day' ordinal='1' />
+            <column datatype='string' name='countryname' ordinal='2' />
+            <column datatype='integer' name='deaths' ordinal='3' />
+            <column datatype='integer' name='cumulativedeaths' ordinal='4' />
+            <column datatype='integer' name='confirmed' ordinal='5' />
+            <column datatype='integer' name='cumulativeconfirmed' ordinal='6' />
+          </columns>
+        </relation>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[countries2.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>id</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[id]</local-name>
+            <parent-name>[countries2.csv]</parent-name>
+            <remote-alias>id</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>day</remote-name>
+            <remote-type>133</remote-type>
+            <local-name>[day]</local-name>
+            <parent-name>[countries2.csv]</parent-name>
+            <remote-alias>day</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>date</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>countryname</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[countryname]</local-name>
+            <parent-name>[countries2.csv]</parent-name>
+            <remote-alias>countryname</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>deaths</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[deaths]</local-name>
+            <parent-name>[countries2.csv]</parent-name>
+            <remote-alias>deaths</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>cumulativedeaths</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[cumulativedeaths]</local-name>
+            <parent-name>[countries2.csv]</parent-name>
+            <remote-alias>cumulativedeaths</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>confirmed</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[confirmed]</local-name>
+            <parent-name>[countries2.csv]</parent-name>
+            <remote-alias>confirmed</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>cumulativeconfirmed</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[cumulativeconfirmed]</local-name>
+            <parent-name>[countries2.csv]</parent-name>
+            <remote-alias>cumulativeconfirmed</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column datatype='integer' name='[Number of Records]' role='measure' type='quantitative' user:auto-column='numrec'>
+        <calculation class='tableau' formula='1' />
+      </column>
+      <column caption='Confirmed' datatype='integer' name='[confirmed]' role='measure' type='quantitative' />
+      <column caption='Countryname' datatype='string' name='[countryname]' role='dimension' semantic-role='[Country].[ISO3166_2]' type='nominal' />
+      <column caption='Cumulativeconfirmed' datatype='integer' name='[cumulativeconfirmed]' role='measure' type='quantitative' />
+      <column caption='Cumulativedeaths' datatype='integer' name='[cumulativedeaths]' role='measure' type='quantitative' />
+      <column caption='Day' datatype='date' name='[day]' role='dimension' type='ordinal' />
+      <column caption='Deaths' datatype='integer' name='[deaths]' role='measure' type='quantitative' />
+      <column caption='Id' datatype='integer' name='[id]' role='dimension' type='ordinal' />
+      <column-instance column='[countryname]' derivation='None' name='[none:countryname:nk]' pivot='key' type='nominal' />
+      <layout dim-ordering='alphabetic' dim-percentage='0.429519' measure-ordering='alphabetic' measure-percentage='0.570481' show-structure='true' />
+      <style>
+        <style-rule element='mark'>
+          <encoding attr='color' field='[none:countryname:nk]' type='palette'>
+            <map to='#4e79a7'>
+              <bucket>&quot;Germany&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;Italy&quot;</bucket>
+            </map>
+            <map to='#76b7b2'>
+              <bucket>&quot;United States of America&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;France&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;Spain&quot;</bucket>
+            </map>
+            <map to='#edc948'>
+              <bucket>&quot;Iraq&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;Republic of Korea&quot;</bucket>
+            </map>
+          </encoding>
+        </style-rule>
+      </style>
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;United States&quot;' />
+      </semantic-values>
+    </datasource>
+  </datasources>
+  <mapsources>
+    <mapsource name='Tableau' />
+  </mapsources>
+  <worksheets>
+    <worksheet name='Cumulative Confirmed'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run>Cumulative Confirmed</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='countries2' name='federated.0mrkz5c00gms3g1fizvno1678vfw' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0mrkz5c00gms3g1fizvno1678vfw'>
+            <column caption='Countryname' datatype='string' name='[countryname]' role='dimension' semantic-role='[Country].[ISO3166_2]' type='nominal' />
+            <column caption='Cumulativeconfirmed' datatype='integer' name='[cumulativeconfirmed]' role='measure' type='quantitative' />
+            <column caption='Day' datatype='date' name='[day]' role='dimension' type='ordinal' />
+            <column-instance column='[countryname]' derivation='None' name='[none:countryname:nk]' pivot='key' type='nominal' />
+            <column-instance column='[cumulativeconfirmed]' derivation='Sum' name='[sum:cumulativeconfirmed:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[day]' derivation='Day-Trunc' name='[tdy:day:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.0mrkz5c00gms3g1fizvno1678vfw].[none:countryname:nk]'>
+            <groupfilter function='union' user:ui-domain='relevant' user:ui-enumeration='inclusive' user:ui-marker='enumerate'>
+              <groupfilter function='member' level='[none:countryname:nk]' member='&quot;Germany&quot;' />
+              <groupfilter function='member' level='[none:countryname:nk]' member='&quot;Italy&quot;' />
+              <groupfilter function='member' level='[none:countryname:nk]' member='&quot;Republic of Korea&quot;' />
+              <groupfilter function='member' level='[none:countryname:nk]' member='&quot;Spain&quot;' />
+              <groupfilter function='member' level='[none:countryname:nk]' member='&quot;United States of America&quot;' />
+            </groupfilter>
+          </filter>
+          <slices>
+            <column>[federated.0mrkz5c00gms3g1fizvno1678vfw].[none:countryname:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.0mrkz5c00gms3g1fizvno1678vfw].[none:countryname:nk]' />
+            </encodings>
+          </pane>
+        </panes>
+        <rows>[federated.0mrkz5c00gms3g1fizvno1678vfw].[sum:cumulativeconfirmed:qk]</rows>
+        <cols>[federated.0mrkz5c00gms3g1fizvno1678vfw].[tdy:day:qk]</cols>
+      </table>
+      <simple-id uuid='{33383116-8E37-4607-A5EA-F6BD6C9AB795}' />
+    </worksheet>
+    <worksheet name='Cumulative Deaths'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run>Cumulative Deaths</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='countries2' name='federated.0mrkz5c00gms3g1fizvno1678vfw' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0mrkz5c00gms3g1fizvno1678vfw'>
+            <column caption='Countryname' datatype='string' name='[countryname]' role='dimension' semantic-role='[Country].[ISO3166_2]' type='nominal' />
+            <column caption='Cumulativedeaths' datatype='integer' name='[cumulativedeaths]' role='measure' type='quantitative' />
+            <column caption='Day' datatype='date' name='[day]' role='dimension' type='ordinal' />
+            <column-instance column='[countryname]' derivation='None' name='[none:countryname:nk]' pivot='key' type='nominal' />
+            <column-instance column='[cumulativedeaths]' derivation='Sum' name='[sum:cumulativedeaths:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[day]' derivation='Day-Trunc' name='[tdy:day:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.0mrkz5c00gms3g1fizvno1678vfw].[none:countryname:nk]'>
+            <groupfilter function='union' user:ui-domain='relevant' user:ui-enumeration='inclusive' user:ui-marker='enumerate'>
+              <groupfilter function='member' level='[none:countryname:nk]' member='&quot;Germany&quot;' />
+              <groupfilter function='member' level='[none:countryname:nk]' member='&quot;Italy&quot;' />
+              <groupfilter function='member' level='[none:countryname:nk]' member='&quot;Republic of Korea&quot;' />
+              <groupfilter function='member' level='[none:countryname:nk]' member='&quot;Spain&quot;' />
+              <groupfilter function='member' level='[none:countryname:nk]' member='&quot;United States of America&quot;' />
+            </groupfilter>
+          </filter>
+          <slices>
+            <column>[federated.0mrkz5c00gms3g1fizvno1678vfw].[none:countryname:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.0mrkz5c00gms3g1fizvno1678vfw].[none:countryname:nk]' />
+            </encodings>
+          </pane>
+        </panes>
+        <rows>[federated.0mrkz5c00gms3g1fizvno1678vfw].[sum:cumulativedeaths:qk]</rows>
+        <cols>[federated.0mrkz5c00gms3g1fizvno1678vfw].[tdy:day:qk]</cols>
+      </table>
+      <simple-id uuid='{325587EA-CFD9-45EB-B253-C64FFC39EFA7}' />
+    </worksheet>
+    <worksheet name='World Map Confirmed Cases'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='countries2' name='federated.0mrkz5c00gms3g1fizvno1678vfw' />
+          </datasources>
+          <mapsources>
+            <mapsource name='Tableau' />
+          </mapsources>
+          <datasource-dependencies datasource='federated.0mrkz5c00gms3g1fizvno1678vfw'>
+            <column caption='Confirmed' datatype='integer' name='[confirmed]' role='measure' type='quantitative' />
+            <column caption='Countryname' datatype='string' name='[countryname]' role='dimension' semantic-role='[Country].[ISO3166_2]' type='nominal' />
+            <column caption='Day' datatype='date' name='[day]' role='dimension' type='ordinal' />
+            <column-instance column='[day]' derivation='MY' name='[my:day:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[countryname]' derivation='None' name='[none:countryname:nk]' pivot='key' type='nominal' />
+            <column-instance column='[confirmed]' derivation='Sum' name='[sum:confirmed:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.0mrkz5c00gms3g1fizvno1678vfw].[my:day:ok]'>
+            <groupfilter function='level-members' level='[my:day:ok]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[federated.0mrkz5c00gms3g1fizvno1678vfw].[my:day:ok]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <encoding attr='space' class='0' field='[federated.0mrkz5c00gms3g1fizvno1678vfw].[Longitude (generated)]' field-type='quantitative' max='21010403.522933163' min='-19064613.162645333' projection='EPSG:3857' range-type='fixed' scope='cols' type='space' />
+            <encoding attr='space' class='0' field='[federated.0mrkz5c00gms3g1fizvno1678vfw].[Latitude (generated)]' field-type='quantitative' max='18332953.692799203' min='-8429006.6670930721' projection='EPSG:3857' range-type='fixed' scope='rows' type='space' />
+          </style-rule>
+          <style-rule element='map'>
+            <format attr='washout' value='0.0' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.0mrkz5c00gms3g1fizvno1678vfw].[sum:confirmed:qk]' />
+              <lod column='[federated.0mrkz5c00gms3g1fizvno1678vfw].[none:countryname:nk]' />
+              <geometry column='[federated.0mrkz5c00gms3g1fizvno1678vfw].[Geometry (generated)]' />
+            </encodings>
+          </pane>
+        </panes>
+        <rows>[federated.0mrkz5c00gms3g1fizvno1678vfw].[Latitude (generated)]</rows>
+        <cols>[federated.0mrkz5c00gms3g1fizvno1678vfw].[Longitude (generated)]</cols>
+      </table>
+      <simple-id uuid='{F6093661-2983-4E33-A633-E3563A4C1DEF}' />
+    </worksheet>
+    <worksheet name='World Map Deaths'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='countries2' name='federated.0mrkz5c00gms3g1fizvno1678vfw' />
+          </datasources>
+          <mapsources>
+            <mapsource name='Tableau' />
+          </mapsources>
+          <datasource-dependencies datasource='federated.0mrkz5c00gms3g1fizvno1678vfw'>
+            <column caption='Countryname' datatype='string' name='[countryname]' role='dimension' semantic-role='[Country].[ISO3166_2]' type='nominal' />
+            <column caption='Day' datatype='date' name='[day]' role='dimension' type='ordinal' />
+            <column caption='Deaths' datatype='integer' name='[deaths]' role='measure' type='quantitative' />
+            <column-instance column='[day]' derivation='MY' name='[my:day:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[countryname]' derivation='None' name='[none:countryname:nk]' pivot='key' type='nominal' />
+            <column-instance column='[deaths]' derivation='Sum' name='[sum:deaths:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.0mrkz5c00gms3g1fizvno1678vfw].[my:day:ok]'>
+            <groupfilter function='level-members' level='[my:day:ok]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[federated.0mrkz5c00gms3g1fizvno1678vfw].[my:day:ok]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <encoding attr='space' class='0' field='[federated.0mrkz5c00gms3g1fizvno1678vfw].[Longitude (generated)]' field-type='quantitative' max='21010403.522933163' min='-19064613.162645333' projection='EPSG:3857' range-type='fixed' scope='cols' type='space' />
+            <encoding attr='space' class='0' field='[federated.0mrkz5c00gms3g1fizvno1678vfw].[Latitude (generated)]' field-type='quantitative' max='18332953.692799203' min='-8429006.6670930721' projection='EPSG:3857' range-type='fixed' scope='rows' type='space' />
+          </style-rule>
+          <style-rule element='map'>
+            <format attr='washout' value='0.0' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.0mrkz5c00gms3g1fizvno1678vfw].[sum:deaths:qk]' />
+              <lod column='[federated.0mrkz5c00gms3g1fizvno1678vfw].[none:countryname:nk]' />
+              <geometry column='[federated.0mrkz5c00gms3g1fizvno1678vfw].[Geometry (generated)]' />
+            </encodings>
+          </pane>
+        </panes>
+        <rows>[federated.0mrkz5c00gms3g1fizvno1678vfw].[Latitude (generated)]</rows>
+        <cols>[federated.0mrkz5c00gms3g1fizvno1678vfw].[Longitude (generated)]</cols>
+      </table>
+      <simple-id uuid='{6D23DC38-6327-48BB-8928-AA42707C951F}' />
+    </worksheet>
+  </worksheets>
+  <dashboards>
+    <dashboard name='Dashboard 1'>
+      <style />
+      <size sizing-mode='automatic' />
+      <datasources>
+        <datasource caption='countries2' name='federated.0mrkz5c00gms3g1fizvno1678vfw' />
+      </datasources>
+      <datasource-dependencies datasource='federated.0mrkz5c00gms3g1fizvno1678vfw'>
+        <column caption='Day' datatype='date' name='[day]' role='dimension' type='ordinal' />
+        <column-instance column='[day]' derivation='MY' name='[my:day:ok]' pivot='key' type='ordinal' />
+      </datasource-dependencies>
+      <zones>
+        <zone h='100000' id='4' type='layout-basic' w='100000' x='0' y='0'>
+          <zone h='98160' id='7' param='horz' type='layout-flow' w='98888' x='556' y='920'>
+            <zone h='98160' id='5' type='layout-basic' w='87777' x='556' y='920'>
+              <zone h='49079' id='3' name='World Map Confirmed Cases' w='87777' x='556' y='920'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+              <zone h='49081' id='10' name='World Map Deaths' w='87777' x='556' y='49999'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+            </zone>
+            <zone fixed-size='160' h='98160' id='6' is-fixed='true' param='vert' type='layout-flow' w='11111' x='88333' y='920'>
+              <zone h='14598' id='8' name='World Map Confirmed Cases' param='[federated.0mrkz5c00gms3g1fizvno1678vfw].[my:day:ok]' type='filter' w='11111' x='88333' y='920'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+              <zone h='7472' id='9' name='World Map Confirmed Cases' pane-specification-id='0' param='[federated.0mrkz5c00gms3g1fizvno1678vfw].[sum:confirmed:qk]' type='color' w='11111' x='88333' y='15518'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+              <zone h='14598' id='11' name='World Map Deaths' param='[federated.0mrkz5c00gms3g1fizvno1678vfw].[my:day:ok]' type='filter' w='11111' x='88333' y='22990'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+              <zone h='7472' id='12' name='World Map Deaths' pane-specification-id='0' param='[federated.0mrkz5c00gms3g1fizvno1678vfw].[sum:deaths:qk]' type='color' w='11111' x='88333' y='37588'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+            </zone>
+          </zone>
+          <zone-style>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='none' />
+            <format attr='border-width' value='0' />
+            <format attr='margin' value='8' />
+          </zone-style>
+        </zone>
+      </zones>
+      <devicelayouts>
+        <devicelayout auto-generated='true' name='Phone'>
+          <size maxheight='850' minheight='850' sizing-mode='vscroll' />
+          <zones>
+            <zone h='100000' id='15' type='layout-basic' w='100000' x='0' y='0'>
+              <zone h='97766' id='16' param='vert' type='layout-flow' w='98698' x='651' y='1117'>
+                <zone h='17737' id='8' mode='checkdropdown' name='World Map Confirmed Cases' param='[federated.0mrkz5c00gms3g1fizvno1678vfw].[my:day:ok]' type='filter' w='13019' x='86330' y='1117'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='48883' id='3' is-fixed='true' name='World Map Confirmed Cases' w='85679' x='651' y='1117'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone h='9078' id='9' name='World Map Confirmed Cases' pane-specification-id='0' param='[federated.0mrkz5c00gms3g1fizvno1678vfw].[sum:confirmed:qk]' type='color' w='13019' x='86330' y='18854'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone h='17737' id='11' mode='checkdropdown' name='World Map Deaths' param='[federated.0mrkz5c00gms3g1fizvno1678vfw].[my:day:ok]' type='filter' w='13019' x='86330' y='27932'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='48883' id='10' is-fixed='true' name='World Map Deaths' w='85679' x='651' y='50000'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone h='9078' id='12' name='World Map Deaths' pane-specification-id='0' param='[federated.0mrkz5c00gms3g1fizvno1678vfw].[sum:deaths:qk]' type='color' w='13019' x='86330' y='45669'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+              </zone>
+              <zone-style>
+                <format attr='border-color' value='#000000' />
+                <format attr='border-style' value='none' />
+                <format attr='border-width' value='0' />
+                <format attr='margin' value='8' />
+              </zone-style>
+            </zone>
+          </zones>
+        </devicelayout>
+      </devicelayouts>
+      <simple-id uuid='{56BB7CE2-93BD-44AB-BF15-3EF892A948E4}' />
+    </dashboard>
+    <dashboard name='Dashboard 2'>
+      <style />
+      <size sizing-mode='automatic' />
+      <datasources>
+        <datasource caption='countries2' name='federated.0mrkz5c00gms3g1fizvno1678vfw' />
+      </datasources>
+      <datasource-dependencies datasource='federated.0mrkz5c00gms3g1fizvno1678vfw'>
+        <column caption='Countryname' datatype='string' name='[countryname]' role='dimension' semantic-role='[Country].[ISO3166_2]' type='nominal' />
+        <column-instance column='[countryname]' derivation='None' name='[none:countryname:nk]' pivot='key' type='nominal' />
+      </datasource-dependencies>
+      <zones>
+        <zone h='100000' id='4' type='layout-basic' w='100000' x='0' y='0'>
+          <zone h='98160' id='7' param='horz' type='layout-flow' w='98888' x='556' y='920'>
+            <zone h='98160' id='5' type='layout-basic' w='87777' x='556' y='920'>
+              <zone h='49080' id='3' name='Cumulative Confirmed' w='87777' x='556' y='920'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+              <zone h='49080' id='10' name='Cumulative Deaths' w='87777' x='556' y='50000'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+            </zone>
+            <zone fixed-size='160' h='98160' id='6' is-fixed='true' param='vert' type='layout-flow' w='11111' x='88333' y='920'>
+              <zone h='41838' id='8' name='Cumulative Confirmed' param='[federated.0mrkz5c00gms3g1fizvno1678vfw].[none:countryname:nk]' type='filter' w='11111' x='88333' y='920'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+              <zone h='14483' id='9' name='Cumulative Confirmed' pane-specification-id='0' param='[federated.0mrkz5c00gms3g1fizvno1678vfw].[none:countryname:nk]' type='color' w='11111' x='88333' y='42758'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+              <zone h='41839' id='11' name='Cumulative Deaths' param='[federated.0mrkz5c00gms3g1fizvno1678vfw].[none:countryname:nk]' type='filter' w='11111' x='88333' y='57241'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+            </zone>
+          </zone>
+          <zone-style>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='none' />
+            <format attr='border-width' value='0' />
+            <format attr='margin' value='8' />
+          </zone-style>
+        </zone>
+      </zones>
+      <devicelayouts>
+        <devicelayout auto-generated='true' name='Phone'>
+          <size maxheight='800' minheight='800' sizing-mode='vscroll' />
+          <zones>
+            <zone h='100000' id='14' type='layout-basic' w='100000' x='0' y='0'>
+              <zone h='97766' id='15' param='vert' type='layout-flow' w='98698' x='651' y='1117'>
+                <zone h='40084' id='8' mode='checkdropdown' name='Cumulative Confirmed' param='[federated.0mrkz5c00gms3g1fizvno1678vfw].[none:countryname:nk]' type='filter' w='13019' x='86330' y='1117'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='48883' id='3' is-fixed='true' name='Cumulative Confirmed' w='85679' x='651' y='1117'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone h='17597' id='9' name='Cumulative Confirmed' pane-specification-id='0' param='[federated.0mrkz5c00gms3g1fizvno1678vfw].[none:countryname:nk]' type='color' w='13019' x='86330' y='41201'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone h='40085' id='11' mode='checkdropdown' name='Cumulative Deaths' param='[federated.0mrkz5c00gms3g1fizvno1678vfw].[none:countryname:nk]' type='filter' w='13019' x='86330' y='58798'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='48883' id='10' is-fixed='true' name='Cumulative Deaths' w='85679' x='651' y='50000'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+              </zone>
+              <zone-style>
+                <format attr='border-color' value='#000000' />
+                <format attr='border-style' value='none' />
+                <format attr='border-width' value='0' />
+                <format attr='margin' value='8' />
+              </zone-style>
+            </zone>
+          </zones>
+        </devicelayout>
+      </devicelayouts>
+      <simple-id uuid='{F8F52308-5D11-4CB2-B81C-92426AEB0E81}' />
+    </dashboard>
+  </dashboards>
+  <windows pres-mode='true' source-height='30'>
+    <window class='worksheet' name='World Map Confirmed Cases'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card param='[federated.0mrkz5c00gms3g1fizvno1678vfw].[my:day:ok]' type='filter' />
+            <card pane-specification-id='0' param='[federated.0mrkz5c00gms3g1fizvno1678vfw].[sum:confirmed:qk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <default-map-tool-selection tool='1' />
+      </viewpoint>
+      <simple-id uuid='{164232B2-484E-48E4-9E15-DA28B2B66A5B}' />
+    </window>
+    <window class='worksheet' name='World Map Deaths'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card param='[federated.0mrkz5c00gms3g1fizvno1678vfw].[my:day:ok]' type='filter' />
+            <card pane-specification-id='0' param='[federated.0mrkz5c00gms3g1fizvno1678vfw].[sum:deaths:qk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <default-map-tool-selection tool='1' />
+      </viewpoint>
+      <simple-id uuid='{29A8F22B-EF45-40AF-A2DF-FF041B5087AE}' />
+    </window>
+    <window class='worksheet' name='Cumulative Confirmed'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card param='[federated.0mrkz5c00gms3g1fizvno1678vfw].[none:countryname:nk]' size='473' type='filter' />
+            <card pane-specification-id='0' param='[federated.0mrkz5c00gms3g1fizvno1678vfw].[none:countryname:nk]' size='101' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{6C085506-51F4-49B0-B1F8-DCE92F3542C5}' />
+    </window>
+    <window class='worksheet' name='Cumulative Deaths'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card param='[federated.0mrkz5c00gms3g1fizvno1678vfw].[none:countryname:nk]' size='473' type='filter' />
+            <card pane-specification-id='0' param='[federated.0mrkz5c00gms3g1fizvno1678vfw].[none:countryname:nk]' size='101' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{FCC399E9-621A-4750-8BED-4AD41BB8321E}' />
+    </window>
+    <window class='dashboard' maximized='true' name='Dashboard 1'>
+      <viewpoints>
+        <viewpoint name='World Map Confirmed Cases'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='World Map Deaths'>
+          <zoom type='entire-view' />
+        </viewpoint>
+      </viewpoints>
+      <active id='11' />
+      <simple-id uuid='{8FC0BA1B-10F3-4328-A5C3-A4CDC2E3202B}' />
+    </window>
+    <window class='dashboard' name='Dashboard 2'>
+      <viewpoints>
+        <viewpoint name='Cumulative Confirmed'>
+          <zoom type='fit-width' />
+        </viewpoint>
+        <viewpoint name='Cumulative Deaths'>
+          <zoom type='fit-height' />
+        </viewpoint>
+      </viewpoints>
+      <active id='8' />
+      <simple-id uuid='{DEC004FA-94CB-49D4-9397-945DC0D9A68B}' />
+    </window>
+  </windows>
+</workbook>
